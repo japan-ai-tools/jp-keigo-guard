@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.japan-ai-tools/jp-keigo-guard",
+  "title": "JP Keigo Guard",
+  "description": "Find double honorifics and mismatched honorific chains in AI-written Japanese, with fixes.",
+  "repository": {
+    "url": "https://github.com/japan-ai-tools/jp-keigo-guard",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "jp-keigo-guard",
+      "version": "0.1.0",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
