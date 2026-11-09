@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jp-keigo-guard"
+version = "0.1.0"
+description = "Find double honorifics (二重敬語) and mismatched honorific chains in AI-written Japanese, by the rules of 敬語の指針."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "NEXUS tools" }]
+keywords = ["mcp", "mcp-server", "japanese", "keigo", "ai-agents", "proofreading"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Natural Language :: Japanese",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.scripts]
+jp-keigo-guard = "keigoguard.server:main"
+
+[project.urls]
+Homepage = "https://github.com/japan-ai-tools/jp-keigo-guard"
+Source = "https://github.com/japan-ai-tools/jp-keigo-guard"
+
+[tool.setuptools]
+packages = ["keigoguard"]
