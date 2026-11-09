@@ -1,0 +1,9 @@
+# JP Keigo Guard
+
+> Finds double honorifics (二重敬語: お読みになられる, おっしゃられる, ご覧になられる) and the honorific chains that the Japanese guideline 「敬語の指針」(文化審議会答申 2007, p.31-32) lists as inappropriate (伺っていただく, ご案内していただく) in AI-written Japanese business text, and returns fixes. Forms the guideline accepts (お召し上がりになる, お見えになる, お伺いする) are not flagged. MCP server, CLI, Python. Stdlib, no network, MIT.
+
+- keigoguard/guard.py: check(text) -> ok, issues(code, severity, text, start, end, fix, reason, source), accepted, counts; fix(text, apply_warnings=False)
+- keigoguard/server.py: MCP stdio server; tools jp_keigo_check, jp_keigo_fix (read-only)
+- Codes: E_DOUBLE_KEIGO, W_DOUBLE_KEIGO_NOUN, E_BAD_KEIGO_LINK, W_BAD_KEIGO_LINK
+- data/jp_keigo_cases_v1.jsonl: 30 cases; python -m keigoguard.bench
+- Limits: checks word forms only, not who the subject is or whether the reader is a superior
