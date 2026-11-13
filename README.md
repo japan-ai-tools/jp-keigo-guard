@@ -54,6 +54,9 @@ It checks word forms, not meaning. It cannot tell whether a 尊敬語 is used fo
 
 Both tools are read-only and offline. Suggested agent rule: after writing a Japanese email or notice, call `jp_keigo_check`, fix every error and rewrite the items in `unfixed` before sending.
 
+MCP protocol: the stdio server speaks both the classic `initialize` flow (2025-06-18 and earlier) and the stateless 2026-07-28 revision (`server/discover`, per-request `_meta`). Tested in `tests/test_mcp_2026.py`.
+MCP の新しい版(2026-07-28・server/discover)と従来の initialize の両方で動きます。
+
 ## CLI and Python
 
 ```bash
